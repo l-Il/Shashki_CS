@@ -33,6 +33,7 @@
       this.player = new System.Windows.Forms.Label();
       this.timer1 = new System.Windows.Forms.Timer(this.components);
       this.obyect = new System.Windows.Forms.Label();
+      this.label1 = new System.Windows.Forms.Label();
       this.SuspendLayout();
       // 
       // player
@@ -58,12 +59,22 @@
       this.obyect.TabIndex = 2;
       this.obyect.Click += new System.EventHandler(this.obyect_Click);
       // 
+      // label1
+      // 
+      this.label1.Location = new System.Drawing.Point(0, 0);
+      this.label1.Name = "label1";
+      this.label1.Size = new System.Drawing.Size(380, 600);
+      this.label1.TabIndex = 3;
+      this.label1.Text = "Вы проиграли!\r\n";
+      this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
-      this.ClientSize = new System.Drawing.Size(361, 598);
+      this.ClientSize = new System.Drawing.Size(364, 601);
+      this.Controls.Add(this.label1);
       this.Controls.Add(this.obyect);
       this.Controls.Add(this.player);
       this.Name = "Form1";
@@ -75,7 +86,9 @@
       this.ResumeLayout(false);
     }
 
-        #endregion
+    private System.Windows.Forms.Label label1;
+
+    #endregion
 
         private System.Windows.Forms.Label player;
         private System.Windows.Forms.Timer timer1;

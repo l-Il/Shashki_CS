@@ -18,7 +18,6 @@ namespace Shashki_CS
     public Random rnd = new Random();
     public int velocity = 150;
     double time = 0;
-    private bool status = true;
     public Form1()
     {
       InitializeComponent();
@@ -67,8 +66,6 @@ namespace Shashki_CS
             player.Location = new Point(25 + 105 * player_position, 450);
             break;
         }
-      obyect.Text = object_rad.ToString();
-      player.Text = player_position.ToString();
       if (time > 50) time -= 50;
       object_y += velocity * timer1.Interval / 1000.0;
       Point op = obyect.Location;
@@ -83,18 +80,13 @@ namespace Shashki_CS
       
       if (player_position == object_rad && obyect.Location.Y >= 354 && obyect.Location.Y < 550)
       {
-        if (status == true)
-        {
-          MessageBox.Show("Мать умерла!");
-          status = false;
-        }
-        
+        label1.Visible = true;
       }
-      
     }
 
     private void Form1_Load(object sender, EventArgs e)
     {
+      label1.Visible = false;
       timer1.Enabled = true;
       player_position = 1;
       object_rad = rnd.Next(0, 3);
